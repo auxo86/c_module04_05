@@ -1,4 +1,5 @@
 ﻿
+@*下面這三行其實沒有也沒差*@
 @{
     Layout = null;
 }
@@ -13,10 +14,11 @@
 <body>
     <div>
         @*路徑要注意，~是在網站目錄後找。沒有~則是在整個網站/後面找*@
+        @*controls一定要有，否則沒有控制列*@
         <video src="/Content/movie.mp4" controls></video>
         <video src="~/Content/movie.mp4" controls></video>
-        <video src="/Home/GetVideo" controls></video>
-        <video src="~/Home/GetVideo" controls></video>
+        <video src="/GetVideo/Home" controls></video>
+        <video src="~/GetVideo/Home" controls></video>
         @*helper產生網址*@
         <video src="@Url.Action("GetVideo","Home")" controls autoplay></video>
     </div>
